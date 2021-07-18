@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+vold test()
+{
+    static int a = 1; //a 是一个静态的局部变量
+    a++;
+    printf("a = %d\n", a); //2 3 4 5 6
+}
+
+int main()
+{
+    int i = 0;
+    while (i<5)
+    {
+        test();
+        i++;
+    }
+    return 0;
+}
