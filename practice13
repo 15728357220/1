@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+typedef struct stu
+{
+	char name[20];
+	short age;
+	char tele[12];
+	char sex[5];
+}stu;
+
+void print(stu* ps)
+{
+	printf("name: %s\n", ps->name);
+	printf("age: %d\n", ps->age);
+	printf("tele: %s\n", ps->tele);
+	printf("sex: %s\n", ps->sex);
+}
+
+int main()
+{
+	stu s = { "李四", 40, "15722223550", "男" };
+	print(&s);
+	return 0;
+}
